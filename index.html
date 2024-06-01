@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="head">
+            <h1>WEATHER APP</h1>
+        </div>
+        <div class="navbar">
+            <p class="tab your-weather">Your Weather</p>
+            <p class="tab search-weather">Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+
+            <!-- grant-location-container -->
+            <div class="sub-container grant-location-container">
+                <img src="/weather-app-images/location.png" alt="location" width="80px" height="80px" loading="lazy">
+                <p class="head1">Grant Location Access</p>
+                <p>Allow access to get weather information</p>
+                <button class="btn grant-access-btn">Grant Access</button>
+            </div>
+            
+            <!-- search bar container -->
+            <!-- <div class="search-weather-container"> -->
+                <form class="search-weather-container">
+                    <input class="search-input" placeholder="Search for a city...">
+                    <button class="btn" type="submit">
+                        <img src="/weather-app-images/search.png" alt="btn" height="20" width="20" loading="lazy">
+                    </button>
+                </form>
+            <!-- </div> -->
+
+            <!-- Loading page -->
+            <div class="sub-container loading-container">
+                <img src="/weather-app-images/loading.gif" alt="" width="150" height="150">
+                <p>Loading...</p>
+            </div>
+
+            <!-- Location details UI -->
+            <div class="sub-container user-location-container">
+                <div class="name">
+                    <p class="cityName"></p>
+                    <img class="cityFlag">
+                </div>
+
+                <p class="data-description"></p>
+
+                <img class="weatherIcon">
+
+                <p class="temperature-data"></p>
+
+                <div class="para-cards">
+                    <div class="para">
+                        <img src="/weather-app-images/wind.png" alt="">
+                        <p>Windspeed</p>
+                        <p class="windspeed-data"></p>
+                    </div>
+
+                    <div class="para">
+                        <img src="/weather-app-images/humidity.png" alt="">
+                        <p>Humidity</p>
+                        <p class="humidity-data"></p>
+                    </div>
+
+                    <div class="para">
+                        <img src="/weather-app-images/cloud.png" alt="">
+                        <p>Cloud</p>
+                        <p class="cloud-data"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- city not found -->
+            <div class="error-404-container">
+                <div class="">
+                    <img src="/weather-app-images/not-found.png" alt="">
+                </div>
+                <p class="msg">City not found</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

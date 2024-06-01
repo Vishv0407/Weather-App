@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather Sans", serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+:root{
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112D4E 0%, #3f72af 100%);
+}
+
+h1{
+    text-align: center;
+    padding-top: 2rem;
+    letter-spacing: 2px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.tab{
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    letter-spacing: 1.75px;
+    font-size: 0.875rem;
+}
+
+.tab.current-tab{
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 5px;
+}
+
+.weather-container{
+    margin-block: 4rem;
+}
+
+.grant-location-container .btn{
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    color: var(--colorLight2);
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+    margin-top: 10px;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.grant-location-container{
+    display: none;
+}
+
+.grant-location-container .head1{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container.active{
+    display: flex;
+}
+
+/* Loading screen */
+.loading-container{
+    display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+
+.loading-container p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+/* User info container - main */
+
+.user-location-container{
+    display: none; 
+}
+ 
+.user-location-container.active{
+    display: flex;
+    gap: 0;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.name .cityName{
+    font-size: 2rem;
+}
+
+.name .cityFlag{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-location-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.user-location-container .weatherIcon{
+    width: 90px;
+    height: 90px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.user-location-container .temperature-data{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.para-cards{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.para{
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.para img{
+    width: 50px;
+    height: 50px;
+}
+
+.para p:first-of-type{
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.para p:last-child{
+    font-size: 1.15rem;
+    font-weight: 200;
+}
+
+
+.search-weather-container{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+    padding: 0.5rem;
+}
+
+.search-weather-container.active{
+    display: flex;
+}
+
+.search-weather-container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(219,226,239,0.5);
+    padding: 0 20px;
+}
+
+.search-weather-container input::placeholder{
+    color: #F9F7F7;
+}
+
+.search-weather-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.719);
+}
+
+.search-weather-container .btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3F72AF;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.error-404-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.error-404-container.active{
+    display: flex;
+}
+
+.error-404-container img{
+    width: 200px;
+}
+
+@media (max-width: 600px) {
+    .para-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .para {
+        width: 100%;
+    }
+}
