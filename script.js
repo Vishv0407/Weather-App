@@ -58,8 +58,6 @@ function getFromSessionStorage() {
     }
 }
 
-
-
 async function fetchUserWeatherInfo(coordinates){
     const {lat, lon} = coordinates;
     
